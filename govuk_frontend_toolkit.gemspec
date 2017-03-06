@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   #WINDOWS
   gemroot_path = `%cd%`
   # get an array of submodule dirs by executing 'pwd' inside each submodule
-  `git submodule --quiet foreach pwd`.split($\).each do |submodule_path|
+  `git submodule --quiet foreach %cd%`.split($\).each do |submodule_path|
     # for each submodule, change working directory to that submodule
     Dir.chdir(submodule_path) do
 
