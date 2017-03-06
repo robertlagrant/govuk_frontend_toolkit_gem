@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   # http://somethingaboutcode.wordpress.com/2012/09/27/include-files-from-git-submodules-when-building-a-ruby-gem/
 
   # UNIX
-  # gemroot_path = `pwd`.strip
+  # gemroot_path = .strip
   #WINDOWS
   gemroot_path = `%cd%`
   # get an array of submodule dirs by executing 'pwd' inside each submodule
