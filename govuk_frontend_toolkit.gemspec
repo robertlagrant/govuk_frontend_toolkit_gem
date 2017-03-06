@@ -21,7 +21,10 @@ Gem::Specification.new do |s|
   # We need to include the files from the submodules, example from:
   # http://somethingaboutcode.wordpress.com/2012/09/27/include-files-from-git-submodules-when-building-a-ruby-gem/
 
-  gemroot_path = `pwd`.strip
+  # UNIX
+  # gemroot_path = `pwd`.strip
+  #WINDOWS
+  gemroot_path = `%cd%`
   # get an array of submodule dirs by executing 'pwd' inside each submodule
   `git submodule --quiet foreach pwd`.split($\).each do |submodule_path|
     # for each submodule, change working directory to that submodule
